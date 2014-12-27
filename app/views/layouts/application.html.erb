@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Itv</title>
+  <title>Smart TV（スマートテレビ）</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="wrap">
+	<div id="head" class="max-hide">
+		<div id="header">
+			<div id="logo"><h1><%= link_to "Smart TV", root_path %></h1></div>
+					<div id="header-navi">
+						<ul>
+							<li><%= link_to "トップ", root_path %></li>
+							<li><a class="btn-lineup" onclick="setPageScrollable();">番組表</a></li>
+							<li><a href="/streax/Users/logout">ログアウト</a></li>
+						</ul>
+					</div>
+		</div>
+	</div>
 
-<%= yield %>
-
+	<div id="contain">
+		<div id="container" class="change-width">
+		<%= yield %>
+		</div>
+	</div>
+	
+	<div id="foot" class="max-hide">
+		<div id="footer">
+			<div id="footer-navi">
+				<ul>
+					<!-- <li><a href="#">利用規約</a></li> -->
+					<!-- <li><a href="#">個人情報保護方針</a></li> -->
+					<!-- <li><a href="#">運営</a></li> -->
+					<!-- <li><a href="#">お問い合わせ</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="controller">
+	<div id="controller-inner">
+		<input type="image" src="/assets/play.gif" width="40" height="30" alt="play" id="play" value="再生">
+		<input type="image" src="/assets/stop.gif" width="35" height="30" alt="stop" id="stop" value="停止">
+		<input type="image" src="/assets/prev.gif" width="35" height="30" alt="prev" id="prev" value="prev">
+		<input type="image" src="/assets/next.gif" width="35" height="30" alt="next" id="next" value="next">
+		<input type="image" src="/assets/chprev.gif" alt="chprev" id="chprev" value="chprev">
+		<input type="image" src="/assets/chnext.gif" alt="chnext" id="chnext" value="chnext">
+		<input type="image" src="/assets/max.gif" width="40" height="40" alt="max" id="max" class="max" value="max">
+		<input type="image" src="/assets/min.gif" width="40" height="40" alt="min" id="min" class="min" value="min">
+		<input type="button" alt="lineup" id="btn-lineup" class="btn-lineup" value="番組表" onclick="setPageScrollable();">
+		<div id="category-display"></div>
+	</div>
+</div>
 </body>
 </html>

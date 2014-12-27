@@ -1,0 +1,66 @@
+<div id="catch"  class="max-hide">
+<h2>ネット動画をテレビのように見よう！</h2>
+<h3 id="setsumei"><a href="http://www.slideshare.net/naoharada/itv-29687278" target="_blank">使い方など（最初にご覧ください）</a></h3>
+</div>
+
+<div id="player-outer" class="change-width">
+<div id="player" class="change-width">
+</div>
+<div id="category"  class="max-hide">
+	<ul>
+		<!--
+		<?php foreach ($categories as $key => $value): ?>
+		<li id="ch-panel<?php echo($key); ?>"><input type="button" ch-id="<?php echo($key); ?>" value="<?php echo($value); ?>"  onClick="test(<?php echo($key); ?>,0)"></input></li>
+		<?php endforeach; ?>
+		-->
+	</ul>
+</div>
+</div>
+<div id="title"><h2>番組表</h2></div>
+<div id="lineup"  class="max-hide">
+	<!--
+	<?php foreach ( $categories as $key => $value ): ?>	
+	-->
+	<div class="lineup-column">
+	<!--
+		<div class="ch">ch<?php echo($key+1) ?></div>
+		<div class="category"><?php echo($value) ?></div>
+		<?php for($i=0; $i<=2; $i++): ?>
+		<div class="m-thum" id="ch<?php echo($key); ?>index<?php echo($i); ?>" onClick="test(<?php echo($key); ?>,<?php echo($i); ?>)">
+			<img class="m-img" src="<?php if(isset($movies[$key][$i]['Movie']['thum'])) {echo($movies[$key][$i]['Movie']['thum']);} ?>" />
+			<div class="m-title"><?php if(isset($movies[$key][$i]['Movie']['title'])) {echo($movies[$key][$i]['Movie']['title']);} ?></div>
+		</div>
+		<?php endfor ?>
+		-->
+	</div>
+	<?php endforeach; ?>
+	<div style="clear:both;"></div>
+</div>
+
+
+<div id="my-box-1" style="padding:10px">
+<div id="lineup-popup">
+	<?php foreach ( $categories as $key => $value ): ?>	
+	<div class="lineup-column">
+		<div class="ch">ch<?php echo($key+1) ?></div>
+		<div class="category"><?php echo($value) ?></div>
+		<?php for($i=0; $i<=9; $i++): ?>
+		<div class="m-thum"  id="ch<?php echo($key); ?>index<?php echo($i); ?>" onClick="test(<?php echo($key); ?>,<?php echo($i); ?>)">
+			<img class="m-img" src="<?php if(isset($movies[$key][$i]['Movie']['thum'])) {echo($movies[$key][$i]['Movie']['thum']);} ?>" />
+			<div class="m-title"><?php if(isset($movies[$key][$i]['Movie']['title'])) {echo($movies[$key][$i]['Movie']['title']);} ?></div>
+		</div>
+		<?php endfor ?>
+	</div>
+	<?php endforeach; ?>
+	<div style="clear:both;"></div>
+</div>
+</div>
+
+
+
+
+<ul>
+	<% @tops.each do |top| %>
+	<li><%= top.title %></li>
+	<% end %>
+</ul>

@@ -1,0 +1,435 @@
+@charset "utf-8";
+
+/*カラーメモ*/
+/*
+Mighty Slate 556270
+Pacifica 4ECDC4
+apple chic C7F464
+Cheery Pink FF6B6B
+grandma's pillow C44D58
+http://www.colourlovers.com/palette/1930/cheer_up_emo_kid
+*/
+
+/* レイアウト */
+body , html {
+	height: 100%;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+#wrap{
+	width: 100%;
+    position: relative;
+    height:auto !important; /*IE6蟇ｾ遲*/
+    height: 100%; /*IE6蟇ｾ遲*/
+    min-height: 100%;
+}
+#head{
+	margin: 0;
+	height: 35px;
+	overflow: hidden;
+}
+#header{
+	width:980px;
+	margin: 0px auto 0px auto;
+	position: relative;
+}
+#contain{
+	margin: 0;
+	padding: 0px 0px 10px 0px;
+	clear: both;
+}
+#container{
+	width:940px;
+	margin: 20px auto 0px auto;
+	padding: 20px;
+	text-align: center;
+}
+#player-outer{
+	width:940px;
+	height: auto;
+}
+#player {
+}
+#foot{
+	height: 100px;
+	width: 100%;
+	clear: both;
+}
+#footer{
+	width:980px;
+	margin: 0px auto 0px auto;
+	position: relative;
+}
+#footer-navi {
+	position: absolute;
+	right: 0px;
+	top:0px;
+}
+#controller{
+	position: fixed !important;  
+    position: absolute;  
+    bottom: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 40px;
+    padding: 0px;   
+    z-index: 9999;
+}
+#controller-inner{
+	width: 980px;
+	margin: 0px auto 0px auto;
+	text-align: center;
+}
+
+/* デザイン */
+body {
+	background-color: #f6f6f6;
+	font-size: 80%;
+}
+h2{
+	padding: 15px 0px 0px 0px;
+	margin: 0px 0px 10px 0px;
+	font-size: 22px;
+	border-bottom: #ccc dashed 1px;
+}
+#title{
+	margin: 20px auto 10px auto; 
+}
+#title h2 {
+	background-color: #ddd;
+	padding: 0;
+	margin: 0;
+	border-bottom: #bbb solid 2px;
+}
+#head{
+	background-color: #3a3a3a;
+	font-size: 85%;
+	color: white;
+}
+#header{
+}
+#contain{
+}
+#container{
+	background-color: #fff;
+}
+#foot{
+}
+#footer{
+}
+#controller{
+	background-color: #3a3a3a;
+}
+#controller-inner{
+}
+
+/* header */
+#header #logo h1 {
+	margin: 0;
+	font-size: 20px;
+	line-height: 35px;
+}
+#header-navi{
+	position:absolute;
+	right: 0px;
+	top:0px;
+	height: 35px;
+	overflow: hidden;
+}
+#header-navi ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border-right: solid #555 1px;
+	height: 35px;
+}
+#header-navi ul li{
+	float: left;
+	border-left: solid #555 1px;
+	padding: 0;
+	margin: 0;
+}
+#header-navi ul li a{
+	color: #fff;
+	text-decoration: none;
+	padding: 0px 7px 0px 7px;
+	line-height: 35px;
+	display: block;
+}
+#header-navi ul li a:hover{
+	background-color: #C44D58;
+}
+li.min{
+	display: none;
+}
+#catch{
+	height: auto;
+	background-color: #eee;
+	padding-bottom: 10px;
+	margin: 0 0 10px 0;
+}
+
+/*プレイヤー*/
+#player-outer{
+	text-align: left;
+	margin: 0;
+	height: 395px;
+}
+#player{
+	float: left;
+	width: 710px;
+	height: 395px;
+	background-color: #CCC;
+}
+#category{
+	float: right;
+	width: 230px;
+	height: 395px;
+	background-color: #556270;
+}
+#category ul{
+	list-style: none;
+	margin: 0px;
+	padding: 10px 0px 0px 0px;
+	text-align: left;
+	width: 100%;
+}
+#category ul li {
+	margin: 0px 10px 0px 10px;
+	padding: 0px;
+}
+#category ul li input{
+	border: none;
+	display: block;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	background-color: #CCC;
+	margin: 0 0 0 0;
+	padding: 0 10px 0 10px;
+	height: 31px;
+	line-height: 30px;
+	border-top: #ccc solid 1px;
+	width: 100%;
+	font-size: 15px;
+	text-align: left;
+}
+#category ul li input{
+	background-color: #eee;
+}
+#category ul li input:hover{
+	background-color: #e7F4b4;
+}
+#category ul li input.playing{
+	background-color: #C7F464;
+}
+/*番組表*/
+#lineup{
+	width: 948px;
+}
+#lineup .lineup-column{
+	width: 150px;
+	float: left;
+	margin: 0px 8px 10px 0px;
+}
+.lineup-column .ch{
+	width: 100%;
+	height: 16px;
+	background-color: #556270;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+}
+.lineup-column .category{
+	width: 100%;
+	height: 16px;
+	background-color: #4ECDC4;
+	font-size: 12px;
+	text-align: center;
+}
+.lineup-column .m-thum{
+	height: 90px;
+	width: 140px;
+	background-color: #ddd;
+	margin: 3px 0 0 0;
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+	border: #DDDDDD solid 5px;
+}
+.lineup-column .playing{
+	border: #FF6B6B solid 5px;
+}
+.lineup-column .m-img{
+	height: 100%;
+	width: 100%;
+}
+.lineup-column .m-title{
+	width: 100%;
+	height: 16px;
+	background-color: #000;
+	color: white;
+	font-size: 12px;
+	position: absolute;
+	bottom: 0px;
+	padding: 0 3px 0 3px;
+	filter: alpha(opacity=75);
+	-moz-opacity:0.75;
+	opacity:0.75;
+
+}
+
+/*ポップアップ番組表*/
+
+#lineup-popup{
+	width:1900px;
+}
+#lineup-popup .lineup-column{
+	width: 150px;
+	float: left;
+	margin: 0px 8px 10px 0px;
+}
+
+/* footer */
+#footer-navi ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 12px;
+}
+#footer-navi ul li{
+	float: left;
+	padding: 0px 0px 0px 20px;
+}
+#footer-navi ul li a{
+	color: #222;
+	text-decoration: none;
+}
+
+/* コントローラー */
+#controller-inner{
+	position: relative;
+	text-align: center;
+}
+#controller-inner #play{
+	position: absolute;
+	top: 0px;
+	left: 10px;
+}
+#controller-inner #stop{
+	position: absolute;
+	top: 0px;
+	left: 60px;	
+}
+#controller-inner #prev{
+	position: absolute;
+	top: 0px;
+	left: 120px;
+}
+#controller-inner #next{
+	position: absolute;
+	top: 0px;
+	left: 180px;
+}
+#controller-inner #chprev{
+	position: absolute;
+	top: 0px;
+	left: 320px;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	background-color: #111;
+	border-radius: 15px;		/* CSS3草案 */
+	-webkit-border-radius: 15px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 15px;	/* Firefox用 */
+}
+#controller-inner #chnext{
+	position: absolute;
+	top: 0px;
+	right: 320px;
+	height: 30px;
+	width: 30px;
+	background-color: #111;
+	border-radius: 15px;		/* CSS3草案 */
+	-webkit-border-radius: 15px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 15px;	/* Firefox用 */
+}
+#controller-inner #min{
+	position: absolute;
+	top: -5px;
+	right: 0px;
+	display: none;
+}
+#controller-inner #max{
+	position: absolute;
+	top: -5px;
+	right: 0px;
+}
+#controller-inner #btn-lineup{
+	position: absolute;
+	top: 0px;
+	right: 50px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 15px;
+	padding: inherit 20px inherit 20px;
+	border-radius: 5px;		/* CSS3草案 */
+	-webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 5px;	/* Firefox用 */
+	background-color: #ddd;
+	font-weight: bold;
+	border: solid #ccc 1px;
+}
+#controller-inner #btn-lineup:hover{
+	background-color: #fff;
+}
+#controller-inner #category-display{
+	background-color: #ddd;
+	margin: 5px auto auto auto;
+	width: 240px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 7px;		/* CSS3草案 */
+	-webkit-border-radius: 7px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 7px;	/* Firefox用 */
+	font-weight: bold;
+	font-size: 16px;
+	background: -moz-linear-gradient(top, #ccc, #fff);/* Firefox逕ｨ */  
+    background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#fff));/* Safari,Google Chrome逕ｨ */
+}
+
+/*説明*/
+#setsumei{
+	height: 35px;
+	width: 300px;
+	background-color: #C44D58;
+	margin: auto;
+	border-radius: 8px;		/* CSS3草案 */
+	-webkit-border-radius: 8px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 8px;	/* Firefox用 */
+	border: solid 1px #ccc;
+}
+#setsumei a{
+	color: white;
+	text-decoration: none;
+	line-height: 35px;
+	display: block;
+}
+
+/*アンケート*/
+#question{
+	position:absolute;
+	top:55px;
+	right: 30px;
+	height: 500px;
+	width: 150px;
+	background-color: #eee;
+}
+#question a {
+	display: block;
+	height: 500px;
+	width: 150px;
+	border: red 5px solid;
+}

@@ -1,0 +1,2 @@
+module SmarttvsHelper
+end
